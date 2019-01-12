@@ -37,5 +37,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getBaseContext(), Dani_activity.class));
             }
         });
+
+        luchoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getBaseContext(), AldeanActivity.class));
+            }
+        });
     }
 }
