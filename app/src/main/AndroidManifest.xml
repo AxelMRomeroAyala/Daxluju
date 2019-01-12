@@ -19,7 +19,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".AxelActivity" />
+
         <activity android:name=".AldeanActivity"></activity>
+
+        <activity android:name=".Dani_activity"></activity>
+
     </application>
 
 </manifest>

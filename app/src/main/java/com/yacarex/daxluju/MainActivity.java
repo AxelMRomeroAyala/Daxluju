@@ -30,5 +30,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getBaseContext(), AxelActivity.class));
             }
         });
+
+        daniButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getBaseContext(), Dani_activity.class));
+            }
+        });
     }
 }
