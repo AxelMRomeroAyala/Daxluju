@@ -18,7 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AxelActivity"></activity>
+        <activity android:name=".AxelActivity" />
+        <activity android:name=".Dani_activity"></activity>
     </application>
 
 </manifest>
