@@ -12,6 +12,7 @@ public class AxelActivity extends AppCompatActivity {
     Button editar;
 
     String edicion= "EDITADO";
+    String edicion2= "EDITADO 2";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

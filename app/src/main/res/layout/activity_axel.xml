@@ -22,4 +22,12 @@
         android:layout_centerInParent="true"
         android:text="EDITAR"/>
 
+    <Button
+        android:id="@+id/axel_editar_2"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/axel_editar"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="EDITAR 2"/>
+
 </RelativeLayout>
