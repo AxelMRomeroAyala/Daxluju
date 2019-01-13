@@ -1,18 +1,16 @@
 package com.yacarex.daxluju;
 
-import android.support.v13.view.DragStartHelper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Dani_activity extends AppCompatActivity {
+public class DaniActivity extends AppCompatActivity {
 
     TextView daniTextView;
     Button editar;
     Button contar;
-
 
     String edicion = "EDITADO";
     String edicion2 = "DANI";
@@ -34,7 +32,7 @@ public class Dani_activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (activo == true) {
+                if (activo) {
 
                     daniTextView.setText(edicion);
                     activo = false;
@@ -42,8 +40,6 @@ public class Dani_activity extends AppCompatActivity {
                     daniTextView.setText(edicion2);
                     activo = true;
                 }
-
-
             }
 
 
@@ -58,5 +54,5 @@ public class Dani_activity extends AppCompatActivity {
             }
         });
 
-        }
     }
+}

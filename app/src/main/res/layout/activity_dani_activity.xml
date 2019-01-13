@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Dani_activity">
+    tools:context=".DaniActivity">
 
     <TextView
         android:id="@+id/dani_text"
@@ -14,8 +14,7 @@
         android:textColor="@android:color/holo_red_dark"
         android:textSize="30sp"
         android:layout_centerHorizontal="true"
-        android:text="Dani"
-        />
+        android:text="Dani" />
 
     <Button
         android:id="@+id/dani_editar"
