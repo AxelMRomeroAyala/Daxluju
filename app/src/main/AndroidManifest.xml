@@ -22,7 +22,7 @@
 
         <activity android:name=".AldeanActivity"></activity>
 
-        <activity android:name=".Dani_activity"></activity>
+        <activity android:name=".DaniActivity"></activity>
 
     </application>
 
