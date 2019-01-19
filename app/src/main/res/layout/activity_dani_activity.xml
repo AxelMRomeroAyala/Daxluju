@@ -1,9 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Dani_activity">
+    tools:context=".DaniActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/dani_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:text="Dani" />
+
+    <Button
+        android:id="@+id/dani_editar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="EDITAR"/>
+
+    <Button
+        android:id="@+id/dani_saludo"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/dani_editar"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Saludar"/>
+
+    <Button
+        android:id="@+id/dani_foto"
+        android:layout_alignBaseline="@+id/dani_editar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Perro"
+        />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@mipmap/ic_launcher_foreground" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@mipmap/ic_launcher_foreground"/>
+
+</RelativeLayout>

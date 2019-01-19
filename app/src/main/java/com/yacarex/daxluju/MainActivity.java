@@ -34,7 +34,14 @@ public class MainActivity extends AppCompatActivity {
         daniButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getBaseContext(), Dani_activity.class));
+                startActivity(new Intent(getBaseContext(), DaniActivity.class));
+            }
+        });
+
+        luchoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getBaseContext(), AldeanActivity.class));
             }
         });
     }
