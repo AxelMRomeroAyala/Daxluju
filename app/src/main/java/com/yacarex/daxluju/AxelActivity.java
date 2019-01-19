@@ -39,7 +39,7 @@ public class AxelActivity extends AppCompatActivity {
         editar2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+
                 Glide.with(getBaseContext())
                         .load("https://picsum.photos/200/300/?random")
                         .into(axelImage);
