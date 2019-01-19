@@ -32,8 +32,9 @@
         android:text="Saludar"/>
 
     <Button
-        android:id="@+id/dani_foto"
-        android:layout_alignBaseline="@+id/dani_editar"
+        android:id="@+id/dani_perro"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/dani_editar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Perro"
