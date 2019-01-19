@@ -22,7 +22,8 @@
         <activity android:name=".AldeanActivity" />
         <activity android:name=".DaniActivity" />
         <activity android:name=".JuanfraActivity" />
-        <activity android:name=".GatoActivity"></activity>
+        <activity android:name=".GatoActivity" />
+        <activity android:name=".DiversionActivity"></activity>
     </application>
 
 </manifest>

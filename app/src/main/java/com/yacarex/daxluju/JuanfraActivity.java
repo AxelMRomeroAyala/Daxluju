@@ -9,6 +9,7 @@ import android.widget.Button;
 public class JuanfraActivity extends AppCompatActivity {
 
     Button openGato;
+    Button diversion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,12 @@ public class JuanfraActivity extends AppCompatActivity {
         openGato.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {startActivity(new Intent(getBaseContext(), GatoActivity.class));
+            }
+        });
+        diversion=findViewById(R.id.open_diversion);
+        diversion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {startActivity(new Intent(getBaseContext(), DiversionActivity.class));
             }
         });
     }
