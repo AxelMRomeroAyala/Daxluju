@@ -56,10 +56,5 @@ public class DaniActivity extends AppCompatActivity {
             }
         });
 
-        perro.setOnClickListener((View){
-
-            startActivity(new Intent(getBaseContext(), PerroActivity.class));
-        });
-
     }
 }
