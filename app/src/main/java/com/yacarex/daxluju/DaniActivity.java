@@ -12,7 +12,7 @@ public class DaniActivity extends AppCompatActivity {
     TextView daniTextView;
     Button editar;
     Button contar;
-    Button perro;
+    Button perroButton;
 
     String edicion = "EDITADO";
     String edicion2 = "DANI";
@@ -28,6 +28,7 @@ public class DaniActivity extends AppCompatActivity {
         daniTextView = findViewById(R.id.dani_text);
         editar = findViewById(R.id.dani_editar);
         contar = findViewById(R.id.dani_saludo);
+        perroButton=findViewById(R.id.dani_perro);
 
         editar.setOnClickListener(new View.OnClickListener() {
 
@@ -56,10 +57,17 @@ public class DaniActivity extends AppCompatActivity {
             }
         });
 
-        perro.setOnClickListener((View){
+        perroButton.setOnClickListener(new View.OnClickListener() {
 
-            startActivity(new Intent(getBaseContext(), PerroActivity.class));
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(getBaseContext(), PerroActivity.class));
+
+            }
         });
+
+
 
     }
 }

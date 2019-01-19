@@ -32,7 +32,7 @@
         android:text="Saludar"/>
 
     <Button
-        android:id="@+id/dani_foto"
+        android:id="@+id/dani_perro"
         android:layout_alignBaseline="@+id/dani_editar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
