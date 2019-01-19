@@ -1,5 +1,6 @@
 package com.yacarex.daxluju;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,7 @@ public class DaniActivity extends AppCompatActivity {
     TextView daniTextView;
     Button editar;
     Button contar;
+    Button perro;
 
     String edicion = "EDITADO";
     String edicion2 = "DANI";
@@ -52,6 +54,11 @@ public class DaniActivity extends AppCompatActivity {
                 contador++;
                 daniTextView.setText(frase + String.valueOf(contador));
             }
+        });
+
+        perro.setOnClickListener((View){
+
+            startActivity(new Intent(getBaseContext(), PerroActivity.class));
         });
 
     }
