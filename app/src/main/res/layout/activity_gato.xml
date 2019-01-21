@@ -16,18 +16,32 @@
         android:layout_gravity="center"
         android:textSize="30sp" />
 
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/posicion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
     <Button
         android:id="@+id/abrir_gato"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:text="Maullar" />
 
-    <Button
-        android:id="@+id/tomar_agua"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Beber" />
+        <Button
+            android:id="@+id/tomar_agua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/abrir_gato"
+            android:layout_marginBottom="-80dp"
+            android:layout_alignRight="@+id/abrir_gato"
+            android:layout_marginRight="0dp"
+            android:text="Beber" />
+
+
+    </RelativeLayout>
 
 </LinearLayout>

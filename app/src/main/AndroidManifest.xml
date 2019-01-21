@@ -28,8 +28,10 @@
             android:label="@string/title_activity_perro"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".JuanfraActivity" />
+
         <activity android:name=".GatoActivity"></activity>
 
+        <activity android:name=".DiversionActivity"></activity>
     </application>
 
 </manifest>
