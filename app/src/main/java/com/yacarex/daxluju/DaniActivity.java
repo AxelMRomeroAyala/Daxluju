@@ -57,8 +57,6 @@ public class DaniActivity extends AppCompatActivity {
             }
         });
 
-<<<<<<< HEAD
-=======
         perroButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -68,9 +66,5 @@ public class DaniActivity extends AppCompatActivity {
 
             }
         });
-
-
-
->>>>>>> axel_branch
     }
 }
