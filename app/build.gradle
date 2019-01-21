@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        release {
+            keyAlias 'daxluju'
+            keyPassword 'daxluju'
+            storeFile file('./DaxlujuSigning.jks')
+            storePassword 'daxluju'
+        }
+    }
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.yacarex.daxluju"
@@ -14,6 +22,9 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.release
         }
     }
 }

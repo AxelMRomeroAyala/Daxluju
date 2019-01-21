@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "940612524815",
+    "firebase_url": "https://daxluju.firebaseio.com",
+    "project_id": "daxluju",
+    "storage_bucket": "daxluju.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940612524815:android:7674c34e8e601756",
+        "android_client_info": {
+          "package_name": "com.yacarex.daxluju"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "940612524815-llqmj63jkduffg4jolpk4m6fk21cr34l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yacarex.daxluju",
+            "certificate_hash": "2b5c7ee262cc77f8177ed00323b1ea53d43270f2"
+          }
+        },
+        {
+          "client_id": "940612524815-ritcudvk9j7257i06eapet0d1ba40cfa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtrYs7r5nk1POw7aydsG4SLK_4Ju3pPqk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "940612524815-ritcudvk9j7257i06eapet0d1ba40cfa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
