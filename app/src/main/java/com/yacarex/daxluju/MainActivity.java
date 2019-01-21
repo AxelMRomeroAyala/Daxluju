@@ -18,11 +18,11 @@ public class MainActivity extends AppCompatActivity {
         setUpButtons();
     }
 
-    private void setUpButtons(){
-        daniButton= findViewById(R.id.dani_button);
-        axelButton= findViewById(R.id.axel_button);
-        luchoButton= findViewById(R.id.lucho_button);
-        juanfraButton= findViewById(R.id.juanfra_button);
+    private void setUpButtons() {
+        daniButton = findViewById(R.id.dani_button);
+        axelButton = findViewById(R.id.axel_button);
+        luchoButton = findViewById(R.id.lucho_button);
+        juanfraButton = findViewById(R.id.juanfra_button);
 
         axelButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +42,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getBaseContext(), AldeanActivity.class));
+            }
+        });
+        juanfraButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getBaseContext(), JuanfraActivity.class));
             }
         });
     }
