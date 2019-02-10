@@ -17,7 +17,8 @@ public class AldeanActivity extends AppCompatActivity {
 
     private TextView door;
     private Button openUP;
-    private ImageView fbiTroper;
+    //private ImageView fbiTroper;
+    private WebView webView;
 
     MediaPlayer soundRep;
 
@@ -29,9 +30,12 @@ public class AldeanActivity extends AppCompatActivity {
 
         door = findViewById(R.id.Door);
         openUP = findViewById(R.id.openTheDoor);
-        fbiTroper = findViewById(R.id.fbiTrop);
+        webView = (WebView)findViewById(R.id.urlView);
 
-        fbiTroper.setVisibility(View.INVISIBLE);
+        webView.loadUrl("https://gifimage.net/wp-content/uploads/2018/11/fbi-open-up-gif-2.gif");
+
+
+        webView.setVisibility(View.INVISIBLE);
 
         //soundRep = (Media) findViewById(R.raw.fbi_open_the_door));
 
@@ -41,7 +45,7 @@ public class AldeanActivity extends AppCompatActivity {
             public void onClick(View view){
 
                 door.setText("Abri la Puerta Manco");
-                fbiTroper.setVisibility(View.VISIBLE);
+                webView.setVisibility(View.VISIBLE);
             }
 
         });
