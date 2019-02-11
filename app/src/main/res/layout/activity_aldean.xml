@@ -1,55 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_centerHorizontal="true"
+    android:orientation="vertical"
     tools:context=".AldeanActivity">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_gravity="center"
+    <ImageButton
+        android:id="@+id/Toasty"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="Toasty"
+        android:background="@android:color/holo_purple"
+        android:scaleType="fitXY"
+        android:src="@drawable/toasty"
+        android:layout_gravity="center_horizontal" />
 
-            >
-
-            <TextView
-                android:id="@+id/Door"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="Puerta cerrada"
-
-            />
-
-            <Button
-                android:id="@+id/openTheDoor"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
-                android:text="OPEN THE DOOR!!!"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/Door"
-
-            />
+    <ImageButton
+        android:id="@+id/fbiCaller"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@android:color/holo_blue_dark"
+        android:contentDescription="FBI"
+        android:scaleType="fitXY"
+        android:src="@drawable/fbi_logo"
+        android:layout_toRightOf="@+id/Toasty"
+        android:layout_gravity="center_horizontal" />
 
 
-            <WebView
-                android:id="@+id/urlView"
-                android:layout_width="280dp"
-                android:layout_height="160dp"
-                android:visibility="invisible"
-                android:layout_gravity="center_horizontal"
-                >
 
-            </WebView>
-
-
-        </LinearLayout>
-
-
-</FrameLayout>
+</LinearLayout>

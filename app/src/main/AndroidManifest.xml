@@ -13,6 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".AldeanFbiActivity"></activity>
+        <activity android:name=".AldeanToastyActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,10 +28,9 @@
         <activity
             android:name=".PerroActivity"
             android:label="@string/title_activity_perro"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".JuanfraActivity" />
-        <activity android:name=".GatoActivity"></activity>
-
+        <activity android:name=".GatoActivity" />
     </application>
 
 </manifest>
