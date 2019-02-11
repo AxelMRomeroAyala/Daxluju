@@ -13,13 +13,14 @@ import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class AldeanActivity extends AppCompatActivity {
 
-    private Button toastyButton;
-    private Button fbiButton;
+    private ImageButton toastyButton;
+    private ImageButton fbiButton;
 
 
     @SuppressLint("WrongViewCast")
