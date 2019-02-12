@@ -23,7 +23,7 @@ public class AldeanToastyActivity extends AppCompatActivity {
         toastButton = findViewById(R.id.toastThis);
 
 
-        editText.setOnClickListener(new View.OnClickListener() {
+        toastButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
