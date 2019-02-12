@@ -1,5 +1,6 @@
 package com.yacarex.daxluju;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,14 +9,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.request.RequestOptions;
 
 public class AxelActivity extends AppCompatActivity {
 
     TextView axelTextView;
     ImageView axelImage;
-    Button editar, editar2;
+    Button editar, editar2, axelMap;
 
     String edicion = "EDITADO";
     String edicion2 = "EDITADO 2";
@@ -29,6 +28,7 @@ public class AxelActivity extends AppCompatActivity {
         editar = findViewById(R.id.axel_editar);
         editar2 = findViewById(R.id.axel_editar_2);
         axelImage = findViewById(R.id.axel_image);
+        axelMap = findViewById(R.id.axel_map);
 
         editar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +45,13 @@ public class AxelActivity extends AppCompatActivity {
                         .into(axelImage);
             }
         });
-    }
+
+        axelMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getBaseContext(), MapsActivity.class));
+            }
+        });
+   }
 
 }
