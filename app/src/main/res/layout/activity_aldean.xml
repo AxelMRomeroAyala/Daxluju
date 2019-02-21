@@ -11,6 +11,7 @@
         android:id="@+id/Toasty"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:layout_margin="10dp"
         android:contentDescription="Toasty"
         android:background="@android:color/holo_purple"
         android:scaleType="fitXY"
@@ -21,6 +22,7 @@
         android:id="@+id/fbiCaller"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:layout_margin="10dp"
         android:background="@android:color/holo_blue_dark"
         android:contentDescription="FBI"
         android:scaleType="fitXY"
@@ -28,6 +30,16 @@
         android:layout_toRightOf="@+id/Toasty"
         android:layout_gravity="center_horizontal" />
 
-
+    <ImageButton
+        android:id="@+id/gliding"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="10dp"
+        android:background="@android:color/holo_orange_dark"
+        android:contentDescription="Glide Image"
+        android:scaleType="fitXY"
+        android:src="@drawable/glide_icon"
+        android:layout_toRightOf="@+id/Toasty"
+        android:layout_gravity="center_horizontal" />
 
 </LinearLayout>
