@@ -9,13 +9,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.yacarex.daxluju.axel.AxelPixelDrawActivity;
+import com.yacarex.daxluju.axel.AxelPixelGridView;
 
 public class AxelActivity extends AppCompatActivity {
 
     TextView axelTextView;
     ImageView axelImage;
-    Button editar, editar2, axelMap;
-
+    Button editar, editar2, axelMap, pixelGrid;
     String edicion = "EDITADO";
     String edicion2 = "EDITADO 2";
 
@@ -29,6 +30,7 @@ public class AxelActivity extends AppCompatActivity {
         editar2 = findViewById(R.id.axel_editar_2);
         axelImage = findViewById(R.id.axel_image);
         axelMap = findViewById(R.id.axel_map);
+        pixelGrid = findViewById(R.id.axel_pixel_grid);
 
         editar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +54,12 @@ public class AxelActivity extends AppCompatActivity {
                 startActivity(new Intent(getBaseContext(), MapsActivity.class));
             }
         });
-   }
+        pixelGrid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getBaseContext(), AxelPixelDrawActivity.class));
+            }
+        });
+    }
 
 }

@@ -7,48 +7,46 @@
     android:layout_centerHorizontal="true"
     tools:context=".AldeanActivity">
 
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/Door"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:text="Puerta cerrada"
+
+            />
+
+        <Button
+            android:id="@+id/openTheDoor"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Door"
+            android:layout_centerHorizontal="true"
             android:layout_gravity="center"
-
-            >
-
-            <TextView
-                android:id="@+id/Door"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="Puerta cerrada"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="OPEN THE DOOR!!!"
 
             />
 
-            <Button
-                android:id="@+id/openTheDoor"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
-                android:text="OPEN THE DOOR!!!"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/Door"
+        <ImageView
+            android:id="@+id/fbiTrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/openUp"
+            android:src="@drawable/openthedoor"
+            android:visibility="invisible"
 
             />
 
-            <ImageView
-                android:id="@+id/fbiTrop"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/openUp"
-                android:src="@drawable/openthedoor"
-                android:visibility="invisible"
 
-                />
-
-
-        </LinearLayout>
+    </LinearLayout>
 
 
 </FrameLayout>

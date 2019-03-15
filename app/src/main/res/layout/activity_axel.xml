@@ -15,7 +15,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:textColor="@android:color/holo_red_dark"
         android:textSize="30sp"
         android:layout_centerHorizontal="true"
         android:text="AXEL"/>
@@ -42,5 +41,13 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="Open Map"/>
+
+    <Button
+        android:id="@+id/axel_pixel_grid"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/axel_map"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Open Pixel Grid"/>
 
 </RelativeLayout>
