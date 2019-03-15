@@ -1,5 +1,5 @@
 package com.yacarex.daxluju;
-
+//agregando comentario
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +13,7 @@ public class DaniActivity extends AppCompatActivity {
     Button editar;
     Button contar;
     Button perroButton;
+    Button b;
 
     String edicion = "EDITADO";
     String edicion2 = "DANI";
