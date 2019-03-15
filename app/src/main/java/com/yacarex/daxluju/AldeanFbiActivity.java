@@ -1,5 +1,8 @@
 package com.yacarex.daxluju;
 
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.media.SoundPool;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +16,9 @@ public class AldeanFbiActivity extends AppCompatActivity {
     private TextView door;
     private Button openUP;
     private WebView webView;
+    SoundPool sp;
+    int playSound;
+
 
 
     @Override
@@ -24,6 +30,10 @@ public class AldeanFbiActivity extends AppCompatActivity {
         door = findViewById(R.id.Door);
         openUP = findViewById(R.id.openTheDoor);
         webView = findViewById(R.id.urlView);
+        //sp = new SoundPool(1, AudioManager.STREAM_MUSIC,1 );
+        //playSound = sp.load(this,R.raw.fbi_open_the_door,1);
+
+
 
         webView.loadUrl("https://gifimage.net/wp-content/uploads/2018/11/fbi-open-up-gif-2.gif");
 
@@ -38,6 +48,8 @@ public class AldeanFbiActivity extends AppCompatActivity {
             public void onClick(View view){
 
                 door.setText("Abri la Puerta Manco");
+                MediaPlayer mediaPlayer = MediaPlayer.create(getBaseContext(),R.raw.fbi_open_the_door);
+                mediaPlayer.start();
                 webView.setVisibility(View.VISIBLE);
             }
 
