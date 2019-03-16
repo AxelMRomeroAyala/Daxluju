@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-public class DaniActivity extends AppCompatActivity {
+public class DaniActivity extends AppCompatActivity  {
 
     TextView daniTextView;
     ImageView glideImg;
@@ -18,6 +18,7 @@ public class DaniActivity extends AppCompatActivity {
     Button contar;
     Button perroButton;
     Button glide;
+    Button recycleView;
 
 
     String edicion = "EDITADO";
@@ -37,6 +38,7 @@ public class DaniActivity extends AppCompatActivity {
         perroButton = findViewById(R.id.dani_perro);
         glideImg = findViewById(R.id.glideImg);
         glide = findViewById(R.id.glid);
+        recycleView = findViewById(R.id.recycleView);
 
         editar.setOnClickListener(new View.OnClickListener() {
 
@@ -84,6 +86,17 @@ public class DaniActivity extends AppCompatActivity {
             }
         });
 
+        recycleView.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(getBaseContext(), RecicleViewPractice.class));
+
+            }
+        });
+
     }
+
 
 }
