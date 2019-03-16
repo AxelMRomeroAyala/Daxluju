@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    tools:context=".AldeanFbiActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+
+        >
+
+        <TextView
+            android:id="@+id/Door"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Puerta cerrada"
+
+            />
+
+        <Button
+            android:id="@+id/openTheDoor"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:text="OPEN THE DOOR!!!"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/Door"
+
+            />
+
+
+        <WebView
+            android:id="@+id/urlView"
+            android:layout_width="280dp"
+            android:layout_height="160dp"
+            android:visibility="invisible"
+            android:layout_gravity="center_horizontal"
+            >
+
+        </WebView>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

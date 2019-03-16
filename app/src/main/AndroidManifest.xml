@@ -23,6 +23,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".AldeanGlidingActivity"></activity>
+        <activity android:name=".AldeanFbiActivity" />
+        <activity android:name=".AldeanToastyActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,6 +42,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".JuanfraActivity" />
         <activity android:name=".GatoActivity" />
+
         <activity android:name=".DiversionActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -53,8 +57,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps" />
+            android:name=".MapsActivity" />
         <activity android:name=".axel.AxelPixelDrawActivity"></activity>
     </application>
 
