@@ -14,7 +14,7 @@
         android:textColor="@android:color/holo_red_dark"
         android:textSize="30sp"
         android:layout_centerHorizontal="true"
-        android:text="Dani" />
+        android:text="Dani"/>
 
     <ImageView
         android:id="@+id/glideImg"
@@ -48,6 +48,7 @@
 
     <Button
         android:id="@+id/glid"
+        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cambio img"

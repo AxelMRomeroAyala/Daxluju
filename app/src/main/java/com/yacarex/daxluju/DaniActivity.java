@@ -36,6 +36,7 @@ public class DaniActivity extends AppCompatActivity {
         contar = findViewById(R.id.dani_saludo);
         perroButton = findViewById(R.id.dani_perro);
         glideImg = findViewById(R.id.glideImg);
+        glide = findViewById(R.id.glid);
 
         editar.setOnClickListener(new View.OnClickListener() {
 
