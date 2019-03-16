@@ -26,10 +26,9 @@
         <activity
             android:name=".PerroActivity"
             android:label="@string/title_activity_perro"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".JuanfraActivity" />
-        <activity android:name=".GatoActivity"></activity>
-
+        <activity android:name=".GatoActivity" />
     </application>
 
 </manifest>

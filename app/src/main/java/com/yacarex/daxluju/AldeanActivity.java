@@ -10,7 +10,7 @@ public class AldeanActivity extends AppCompatActivity {
 
     private TextView door;
     private Button openUP;
-    private ImageView fbiTroper
+    private ImageView fbiTroper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
