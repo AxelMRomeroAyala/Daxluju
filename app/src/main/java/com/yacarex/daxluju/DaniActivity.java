@@ -1,19 +1,25 @@
 package com.yacarex.daxluju;
-//agregando comentario
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-public class DaniActivity extends AppCompatActivity {
+import com.bumptech.glide.Glide;
+
+public class DaniActivity extends AppCompatActivity  {
 
     TextView daniTextView;
+    ImageView glideImg;
     Button editar;
     Button contar;
     Button perroButton;
-    Button b;
+    Button glide;
+    Button recycleView;
+
 
     String edicion = "EDITADO";
     String edicion2 = "DANI";
@@ -29,7 +35,10 @@ public class DaniActivity extends AppCompatActivity {
         daniTextView = findViewById(R.id.dani_text);
         editar = findViewById(R.id.dani_editar);
         contar = findViewById(R.id.dani_saludo);
-        perroButton=findViewById(R.id.dani_perro);
+        perroButton = findViewById(R.id.dani_perro);
+        glideImg = findViewById(R.id.glideImg);
+        glide = findViewById(R.id.glid);
+        recycleView = findViewById(R.id.recycleView);
 
         editar.setOnClickListener(new View.OnClickListener() {
 
@@ -67,5 +76,26 @@ public class DaniActivity extends AppCompatActivity {
 
             }
         });
+        glide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Glide.with(getBaseContext())
+                        .load("https://i.pinimg.com/originals/f0/98/f1/f098f10475257327f9633b1a71943587.jpg")
+                        .into(glideImg);
+            }
+        });
+
+        recycleView.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(getBaseContext(), RecicleViewPractice.class));
+
+            }
+        });
+
     }
+
+
 }

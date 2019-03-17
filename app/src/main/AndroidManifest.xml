@@ -59,6 +59,7 @@
         <activity
             android:name=".MapsActivity" />
         <activity android:name=".axel.AxelPixelDrawActivity"></activity>
+        <activity android:name=".RecicleViewPractice"></activity>
     </application>
 
 </manifest>

@@ -13,7 +13,13 @@
         android:layout_marginStart="30dp"
         android:textSize="30sp"
         android:layout_centerHorizontal="true"
-        android:text="Dani" />
+        android:text="Dani"/>
+
+    <ImageView
+        android:id="@+id/glideImg"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+    />
 
     <Button
         android:id="@+id/dani_editar"
@@ -37,6 +43,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Perro"
+        />
+
+    <Button
+        android:id="@+id/glid"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cambio img"
+        />
+
+    <Button
+        android:id="@+id/recycleView"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/dani_saludo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="recycle"
         />
 
 

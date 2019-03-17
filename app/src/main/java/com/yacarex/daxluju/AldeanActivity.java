@@ -22,6 +22,9 @@ public class AldeanActivity extends AppCompatActivity {
     private ImageButton toastyButton;
     private ImageButton fbiButton;
     private ImageButton glideButton;
+    private TextView door;
+    private Button openUP;
+    private ImageView fbiTroper;
 
 
     @SuppressLint("WrongViewCast")
