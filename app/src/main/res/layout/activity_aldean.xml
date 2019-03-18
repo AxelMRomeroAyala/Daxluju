@@ -1,45 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:columnCount="3"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/aldeanbg3"
     tools:context=".AldeanActivity">
 
-    <ImageButton
-        android:id="@+id/Toasty"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+    <TextView
+        android:id="@+id/generalTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:contentDescription="Toasty"
-        android:background="@android:color/holo_purple"
-        android:scaleType="fitXY"
-        android:src="@drawable/toasty"
-        android:layout_gravity="center_horizontal" />
+        android:text="Lista de Ejrcicios"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
 
-    <ImageButton
-        android:id="@+id/fbiCaller"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_margin="10dp"
-        android:background="@android:color/holo_blue_dark"
-        android:contentDescription="FBI"
-        android:scaleType="fitXY"
-        android:src="@drawable/fbi_logo"
-        android:layout_toRightOf="@+id/Toasty"
-        android:layout_gravity="center_horizontal" />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/generalTitle"
+        android:layout_marginTop="25dp">
 
-    <ImageButton
-        android:id="@+id/gliding"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_margin="10dp"
-        android:background="@android:color/holo_orange_dark"
-        android:contentDescription="Glide Image"
-        android:scaleType="fitXY"
-        android:src="@drawable/glide_icon"
-        android:layout_toRightOf="@+id/Toasty"
-        android:layout_gravity="center_horizontal" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
 
-</LinearLayout>
+            <ImageButton
+                android:id="@+id/Toasty"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="start"
+                android:layout_margin="10dp"
+
+                android:background="@android:color/holo_purple"
+                android:contentDescription="Toasty"
+                android:scaleType="fitCenter"
+                android:src="@drawable/toasty" />
+
+            <ImageButton
+                android:id="@+id/fbiCaller"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_row="0"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:layout_toRightOf="@+id/Toasty"
+
+                android:background="@android:color/holo_blue_dark"
+                android:contentDescription="FBI"
+                android:scaleType="fitCenter"
+                android:src="@drawable/fbi_logo" />
+
+            <ImageButton
+                android:id="@+id/gliding"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+
+                android:background="@android:color/holo_orange_dark"
+                android:contentDescription="Glide Image"
+                android:scaleType="fitCenter"
+                android:src="@drawable/glide_icon" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/imageList"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center_horizontal"
+
+                android:layout_margin="10dp"
+
+                android:adjustViewBounds="false"
+                android:background="@android:color/holo_green_light"
+                android:contentDescription="Glide Image"
+                android:scaleType="fitCenter"
+                android:src="@drawable/recycle_icon" />
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>

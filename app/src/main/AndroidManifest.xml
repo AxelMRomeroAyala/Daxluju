@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".AldeanGlidingActivity"></activity>
+        <activity android:name=".AldeanImageListActivity"></activity>
+        <activity android:name=".AldeanGlidingActivity" />
         <activity android:name=".AldeanFbiActivity" />
         <activity android:name=".AldeanToastyActivity" />
         <activity android:name=".MainActivity">

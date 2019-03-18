@@ -21,7 +21,7 @@ public class AldeanActivity extends AppCompatActivity {
 
     private ImageButton toastyButton;
     private ImageButton fbiButton;
-    private ImageButton glideButton;
+    private ImageButton glideButton, imageList;
 
 
     @SuppressLint("WrongViewCast")
@@ -33,6 +33,7 @@ public class AldeanActivity extends AppCompatActivity {
         toastyButton = findViewById(R.id.Toasty);
         fbiButton = findViewById(R.id.fbiCaller);
         glideButton = findViewById(R.id.gliding);
+        imageList = findViewById(R.id.imageList);
 
         toastyButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,7 +56,12 @@ public class AldeanActivity extends AppCompatActivity {
             }
         });
 
-
+        imageList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getBaseContext(),AldeanImageListActivity.class));
+            }
+        });
 
     }
 }

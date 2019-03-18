@@ -34,41 +34,41 @@ public class AldeanGlidingActivity extends AppCompatActivity {
         cleanButton = findViewById(R.id.imageCleanButton);
         progressBar = findViewById(R.id.progressBar);
 
-        ;
+
 
         loadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                progressBar.setVisibility(View.VISIBLE);
+            progressBar.setVisibility(View.VISIBLE);
 
-                Glide.with(getBaseContext())
-                    .load("https://oyster.ignimgs.com/mediawiki/apis.ign.com/spyro-the-dragon/b/b3/Spyro_Reignited_Trilogy_20181115213349.png")
+            Glide.with(getBaseContext())
+                .load("https://oyster.ignimgs.com/mediawiki/apis.ign.com/spyro-the-dragon/b/b3/Spyro_Reignited_Trilogy_20181115213349.png")
 
-                    .apply(new RequestOptions()
-                        .signature(new ObjectKey("aldeanGlideCache"))
-                        .skipMemoryCache(true))
-                    .transition(DrawableTransitionOptions.withCrossFade(200))
-                    .addListener(new RequestListener<Drawable>() {
+                .apply(new RequestOptions()
+                    .signature(new ObjectKey("aldeanGlideCache"))
+                    .skipMemoryCache(true))
+                .transition(DrawableTransitionOptions.withCrossFade(200))
+                .addListener(new RequestListener<Drawable>() {
 
-                        @Override
-                        public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                    @Override
+                    public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
 
-                            progressBar.setVisibility(View.GONE);
-                            glideView.setImageResource(R.drawable.fbi_logo);
-                            return false;
+                        progressBar.setVisibility(View.GONE);
+                        glideView.setImageResource(R.drawable.fbi_logo);
+                        return false;
 
-                        }
+                    }
 
-                        @Override
-                        public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+                    @Override
+                    public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
 
-                            progressBar.setVisibility(View.GONE);
-                            return false;
+                        progressBar.setVisibility(View.GONE);
+                        return false;
 
-                        }
-                    })
-                    .into(glideView);
+                    }
+                })
+                .into(glideView);
 
                 }
         });
