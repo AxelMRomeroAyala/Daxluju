@@ -1,4 +1,4 @@
-package com.yacarex.daxluju;
+package com.yacarex.daxluju.axel;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,8 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.yacarex.daxluju.axel.AxelPixelDrawActivity;
-import com.yacarex.daxluju.axel.AxelPixelGridView;
+import com.yacarex.daxluju.R;
 
 public class AxelActivity extends AppCompatActivity {
 

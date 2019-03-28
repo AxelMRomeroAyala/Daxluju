@@ -1,20 +1,25 @@
 package com.yacarex.daxluju.axel;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.drawable.Drawable;
+import android.os.Environment;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.yacarex.daxluju.models.axel.StrokeModel;
+
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 
-public class AxelPixelGridView extends View {
+public class AxelPixelGridView extends View{
 
-    private float startX = 0F;
-    private float startY = 0F;
     private int matrixIndex = 0;
     private int numColumns, numRows;
     private int cellWidth, cellHeight;
@@ -22,8 +27,7 @@ public class AxelPixelGridView extends View {
     private Paint currentPaint = new Paint();
     private int currentColor = Color.BLACK;
     private boolean[][] currentCellMatrix;
-    private ArrayList<boolean[][]> matrixes = new ArrayList<>();
-    private ArrayList<Integer> colorList = new ArrayList<>();
+    private ArrayList<StrokeModel> strokes = new ArrayList<>();
     private boolean showGrid = true;
 
     public AxelPixelGridView(Context context) {
@@ -32,21 +36,16 @@ public class AxelPixelGridView extends View {
 
     public AxelPixelGridView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        currentPaint.setStyle(Paint.Style.FILL_AND_STROKE);
-
         init();
     }
 
     private void init() {
-//        matrixIndex++;
-//        matrixes.add(currentCellMatrix);
-//        colorList.add(currentColor);
+        currentPaint.setStyle(Paint.Style.FILL_AND_STROKE);
     }
 
     public void updateMatrixes(boolean currentCellMatrix[][]) {
-        matrixes.add(currentCellMatrix);
         int newColor = currentColor;
-        colorList.add(newColor);
+        strokes.add(new StrokeModel(currentCellMatrix, newColor));
         this.currentCellMatrix = new boolean[numColumns][numRows];
         matrixIndex++;
     }
@@ -143,7 +142,7 @@ public class AxelPixelGridView extends View {
 
     public void undo() {
         if (matrixIndex > 0) {
-            matrixes.remove(matrixes.size() - 1);
+            strokes.remove(strokes.size() - 1);
             matrixIndex--;
             invalidate();
         }
@@ -163,19 +162,19 @@ public class AxelPixelGridView extends View {
     }
 
     private void computePixels(Canvas canvas) {
-        if (matrixes != null && !matrixes.isEmpty()) {//if the matrix array is not null or empty
+        if (strokes != null && !strokes.isEmpty()) {//if the matrix array is not null or empty
             for (int i = 0; i < numColumns; i++) {//for each X value Axis in pixel representation
                 for (int j = 0; j < numRows; j++) {//for each Y value Axis in pixel representation
-                    for (int h = 0; h < matrixes.size(); h++) {//for each matrix in the array
-                        if (matrixes.get(h) != null) {//if it is not null
-                            if (matrixes.get(h)[i][j]) {//get it and paint the corresponding quadrant
+                    for (int h = 0; h < strokes.size(); h++) {//for each matrix in the array
+                        if (strokes.get(h) != null) {//if it is not null
+                            if (strokes.get(h).getMatrix()[i][j]) {//get it and paint the corresponding quadrant
 
-                                Paint gridPaint= new Paint();
-                                gridPaint.setColor(colorList.get(h));
+                                Paint gridPaint = new Paint();
+                                gridPaint.setColor(strokes.get(h).getColor());
                                 canvas.drawRect(i * cellWidth, j * cellHeight,
                                         (i + 1) * cellWidth, (j + 1) * cellHeight,
                                         gridPaint);
-                                Log.d("Paint", "color in position " + String.valueOf(h) + " was " + String.valueOf(colorList.get(h)));
+                                Log.d("Paint", "color in position " + String.valueOf(h) + " was " + String.valueOf(strokes.get(h).getColor()));
                             }
                         }
                     }
@@ -194,8 +193,25 @@ public class AxelPixelGridView extends View {
         currentColor = color;
         Paint paint = new Paint();
         paint.setColor(color);
-        currentPaint= paint;
+        currentPaint = paint;
     }
+
+    public Bitmap createBitmap() {
+        Bitmap b = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.ARGB_8888);
+        Canvas c = new Canvas(b);
+        layout(0, 0, getWidth(), getHeight());
+//Get the view’s background
+        Drawable bgDrawable = getBackground();
+        if (bgDrawable != null)
+//has background drawable, then draw it on the canvas
+            bgDrawable.draw(c);
+        else
+//does not have background drawable, then draw white background on the canvas
+            c.drawColor(Color.WHITE);
+        draw(c);
+        return b;
+    }
+
 }
 
 

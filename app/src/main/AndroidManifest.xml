@@ -33,7 +33,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AxelActivity" />
+        <activity android:name=".axel.AxelActivity" />
         <activity android:name=".AldeanActivity" />
         <activity android:name=".DaniActivity" />
         <activity
@@ -57,9 +57,10 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity" />
-        <activity android:name=".axel.AxelPixelDrawActivity"></activity>
-        <activity android:name=".RecicleViewPractice"></activity>
+            android:name=".axel.MapsActivity" />
+        <activity android:name=".axel.AxelPixelDrawActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".RecicleViewPractice"/>
     </application>
 
 </manifest>
