@@ -56,11 +56,12 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <activity android:name=".axel.MapsActivity" />
         <activity
-            android:name=".axel.MapsActivity" />
-        <activity android:name=".axel.AxelPixelDrawActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:name=".RecicleViewPractice"/>
+            android:name=".axel.AxelPixelDrawActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".RecicleViewPractice" />
     </application>
 
 </manifest>

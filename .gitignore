@@ -27,6 +27,8 @@ local.properties
 .idea/scopes/scope_settings.xml
 .idea/vcs.xml
 .idea/gradle.xml
+.idea/misc.xml
+.idea/gradle.xml
 *.iml
 
 # OS-specific files
@@ -39,3 +41,4 @@ ehthumbs.db
 Thumbs.db
 .idea/caches/build_file_checksums.ser
 *.xml___jb_tmp___
+.idea/caches/gradle_models.ser

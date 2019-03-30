@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.yacarex.daxluju.models.axel.PixelArtModel;
 import com.yacarex.daxluju.models.axel.StrokeModel;
 
 import java.io.File;
@@ -27,7 +28,7 @@ public class AxelPixelGridView extends View{
     private Paint currentPaint = new Paint();
     private int currentColor = Color.BLACK;
     private boolean[][] currentCellMatrix;
-    private ArrayList<StrokeModel> strokes = new ArrayList<>();
+    private PixelArtModel pixelArtModel;
     private boolean showGrid = true;
 
     public AxelPixelGridView(Context context) {
@@ -40,12 +41,13 @@ public class AxelPixelGridView extends View{
     }
 
     private void init() {
+        pixelArtModel= new PixelArtModel();
         currentPaint.setStyle(Paint.Style.FILL_AND_STROKE);
     }
 
     public void updateMatrixes(boolean currentCellMatrix[][]) {
         int newColor = currentColor;
-        strokes.add(new StrokeModel(currentCellMatrix, newColor));
+        pixelArtModel.addStroke(new StrokeModel(currentCellMatrix, newColor));
         this.currentCellMatrix = new boolean[numColumns][numRows];
         matrixIndex++;
     }
@@ -142,7 +144,7 @@ public class AxelPixelGridView extends View{
 
     public void undo() {
         if (matrixIndex > 0) {
-            strokes.remove(strokes.size() - 1);
+            pixelArtModel.removeLastStroke();
             matrixIndex--;
             invalidate();
         }
@@ -162,6 +164,7 @@ public class AxelPixelGridView extends View{
     }
 
     private void computePixels(Canvas canvas) {
+        ArrayList<StrokeModel> strokes = pixelArtModel.getStrokes();
         if (strokes != null && !strokes.isEmpty()) {//if the matrix array is not null or empty
             for (int i = 0; i < numColumns; i++) {//for each X value Axis in pixel representation
                 for (int j = 0; j < numRows; j++) {//for each Y value Axis in pixel representation
