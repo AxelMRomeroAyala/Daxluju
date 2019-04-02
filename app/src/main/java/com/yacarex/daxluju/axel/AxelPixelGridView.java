@@ -10,6 +10,7 @@ import android.os.Environment;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
+import android.view.ScaleGestureDetector;
 import android.view.View;
 
 import com.yacarex.daxluju.models.axel.PixelArtModel;
@@ -19,7 +20,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 
-public class AxelPixelGridView extends View{
+public class AxelPixelGridView extends View {
 
     private int matrixIndex = 0;
     private int numColumns, numRows;
@@ -30,6 +31,8 @@ public class AxelPixelGridView extends View{
     private boolean[][] currentCellMatrix;
     private PixelArtModel pixelArtModel;
     private boolean showGrid = true;
+    private ScaleGestureDetector mScaleDetector;
+    private float mScaleFactor = 1.f;
 
     public AxelPixelGridView(Context context) {
         this(context, null);
@@ -41,8 +44,9 @@ public class AxelPixelGridView extends View{
     }
 
     private void init() {
-        pixelArtModel= new PixelArtModel();
+        pixelArtModel = new PixelArtModel();
         currentPaint.setStyle(Paint.Style.FILL_AND_STROKE);
+        mScaleDetector = new ScaleGestureDetector(getContext(), new ScaleListener());
     }
 
     public void updateMatrixes(boolean currentCellMatrix[][]) {
@@ -91,12 +95,15 @@ public class AxelPixelGridView extends View{
 
     @Override
     protected void onDraw(Canvas canvas) {
+        canvas.save();
+        canvas.scale(mScaleFactor, mScaleFactor);
+        //...
+        //Your onDraw() code
         canvas.drawColor(Color.WHITE);
 
         if (numColumns == 0 || numRows == 0) {
             return;
         }
-
 
         computePixels(canvas);
 
@@ -112,18 +119,21 @@ public class AxelPixelGridView extends View{
         }
 
         paintGrid(canvas);
-
+        //...
+        canvas.restore();
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
 
+        //mScaleDetector.onTouchEvent(event);
+
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 break;
             case MotionEvent.ACTION_MOVE:
-                int column = (int) (event.getX() / cellWidth);
-                int row = (int) (event.getY() / cellHeight);
+                int column = (int) (event.getX()/mScaleFactor / cellWidth);
+                int row = (int) (event.getY()/mScaleFactor / cellHeight);
 
                 try {
                     currentCellMatrix[column][row] = true;
@@ -215,6 +225,22 @@ public class AxelPixelGridView extends View{
         return b;
     }
 
+    public PixelArtModel getPixelArtModel() {
+        return pixelArtModel;
+    }
+
+    private class ScaleListener extends ScaleGestureDetector.SimpleOnScaleGestureListener {
+        @Override
+        public boolean onScale(ScaleGestureDetector detector) {
+            mScaleFactor *= detector.getScaleFactor();
+
+            // Don't let the object get too small or too large.
+            mScaleFactor = Math.max(1.f, Math.min(mScaleFactor, 5.0f));
+
+            invalidate();
+            return true;
+        }
+    }
 }
 
 

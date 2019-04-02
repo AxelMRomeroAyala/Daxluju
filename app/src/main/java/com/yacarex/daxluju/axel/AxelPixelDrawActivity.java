@@ -155,7 +155,7 @@ public class AxelPixelDrawActivity extends AppCompatActivity implements PreviewI
         String root = Environment.getExternalStorageDirectory().toString();
         File myDir = new File(root);
         myDir.mkdirs();
-        String fname = "Image-" + image_name + ".jpg";
+        String fname = image_name + ".jpg";
         File file = new File(myDir, fname);
         if (file.exists()) file.delete();
         Log.i("LOAD", root + fname);
@@ -209,15 +209,15 @@ public class AxelPixelDrawActivity extends AppCompatActivity implements PreviewI
             // result of the request.
 
         } else {
-            PreviewDialog previewDialog = new PreviewDialog(AxelPixelDrawActivity.this, pixelGridView.createBitmap(), this);
+            PreviewDialog previewDialog = new PreviewDialog(AxelPixelDrawActivity.this, pixelGridView.createBitmap(), pixelGridView.getPixelArtModel(), this);
             previewDialog.show();
         }
 
     }
 
     @Override
-    public void onPreviewConfirm() {
-        saveImage(pixelGridView.createBitmap(), "GENERIC NAME");
+    public void onPreviewConfirm(String name) {
+        saveImage(pixelGridView.createBitmap(), name);
     }
 
     @Override

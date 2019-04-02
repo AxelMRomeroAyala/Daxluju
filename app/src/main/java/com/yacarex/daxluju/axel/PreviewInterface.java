@@ -2,6 +2,6 @@ package com.yacarex.daxluju.axel;
 
 public interface PreviewInterface {
 
-    void onPreviewConfirm();
+    void onPreviewConfirm(String name);
     void onPreviewCancel();
 }
